@@ -15,7 +15,8 @@ const handleSubmit = async(e) => {
 const Register = () => {
 
    const {register} = useContext(UserContext);
-//	const navigate = useNavigate();
+
+   //	const navigate = useNavigate();
 
    const [name      , setName      ] = useState("");
 	const [email     , setEmail     ] = useState("");

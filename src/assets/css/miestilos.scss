@@ -1,0 +1,267 @@
+/*
+@import-normalize;
+*/
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Libre+Caslon+Text:wght@400;700&display=swap');
+
+  
+$primary-font : 'EB Garamond', serif;
+$secondary-font:'Libre Caslon Text', serif;
+$primary-color: #EEEEEE;
+$secondary-color: #180795;
+$color-items-menu:#EEEEEE;
+$fondo-menu: #222d8d;
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 ;
+}
+
+.mihero{
+  display: flex;
+	max-width: 100%;
+	height: 70vh;
+	background-image: url("/hero_01.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+}
+
+.mihero .wrap{
+	max-width: 1000px;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: left;
+}  
+
+
+.mihero .wrap .box h1{
+  font-family: $primary-font;
+  font-size: larger;
+  font-weight: bolder;
+  color: $secondary-color;
+  line-height: .9;
+  margin: 15px;
+  padding-bottom: 10px;
+}
+
+.mihero .wrap .box p{
+  font-family: $primary-font;
+  font-size: 15px;
+  font-weight: bolder;
+  color: $secondary-color;
+  line-height: 1.0;
+}
+
+.mihero .botones{
+  padding: 50px;
+}
+
+.mihero .wrap .box .botones .btn1 {
+	flex-basis: 30%;
+	border: solid 2px;
+	border-radius: 20px;
+	padding: 10px 30px 10px 30px;
+	margin-right: 20px;
+	text-align: center;
+	text-decoration: none;
+  font-family: $primary-font;
+  font-weight: bold;
+	color: $secondary-color;
+}
+
+.wrap .box .botones .btn2{
+	flex-basis: 30%;
+	border: solid 2px;
+	border-radius: 20px;
+	padding: 10px 30px 10px 30px;
+	text-align: center;
+	text-decoration: none;
+  font-family: $primary-font;
+  font-weight: bold;
+	color: $secondary-color;
+}
+
+.cabecera{
+    background-color:$fondo-menu;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    text-decoration: none;
+  }
+
+.cabecera_logo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  font-family: $primary-font;
+  font-weight: bold;
+  color: $color-items-menu;
+}
+
+.cabecera_logo h1{
+margin: 10px;
+}
+
+
+.cabecera_items a {
+  margin: 15px;
+  color:white;
+  position:relative;
+  text-decoration: none;
+}
+
+.cabecera_toggle{
+  display: none;
+}
+
+@media (max-width : 768px){
+  .cabecera_items {
+     position: absolute;
+     top: 60px;
+     left: 0;
+     background-color:$fondo-menu;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     height: -webkit-fill-available;
+     transform: translateX(-100%);
+     transition: 0.3s ease all;
+    }
+
+    .cabecera_items.open {
+      transform: translateX(0) !important;
+    }
+    
+    .cabecera_toggle {
+      display: flex !important;
+      flex-direction: column;
+      margin: 15px;
+    }
+
+    .cabecera_toggle span{
+    width: 30px;
+    height: 4px;
+    background-color:$color-items-menu;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+   }
+   .cabecera_toggle.open > span {
+      transform: rotate( 45deg) translate(0px, 0px);
+   }
+   .cabecera_toggle.open > span:nth-child(2) {
+      display: none;
+ }
+ .cabecera_toggle.open > span:nth-child(3) {
+  transform: rotate( -45deg) translate(-5px, 1px);
+ }
+}
+.s_footer {
+  font-family: $primary-font;
+  font-weight: bold;
+  color: $color-items-menu;
+}
+
+.logo_footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.link_footer a {
+  color:white;
+  text-decoration: none;
+}
+
+.section_about{
+  font-family: $primary-font;
+  font-size: larger;
+  font-weight: bolder;
+  color: $secondary-color;
+}
+
+
+.login-form {
+  background-color: white;
+  padding: 3rem;
+  box-shadow: 0 4px 8px 0 rgba(235, 119, 119, 0.2), 0 6px 20px 0 rgba(230, 175, 175, 0.19);
+}
+
+input[type="email"],
+input[type="password"] {
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.form_login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 80vh;  
+  font-family: $primary-font;
+  font-size: larger;
+  font-weight: bolder;
+  color: $secondary-color;
+}
+
+
+.container_card {
+  display: flex;
+//  flex-direction: column;
+  justify-content: center;
+//  flex: 0 1 calc(50% - 1em);
+}
+
+.card_i {
+  background: $primary-color;
+  width: 270px;
+  height: 348px;
+  margin: 20px;
+}
+
+
+.container_categ{
+  display:flex;
+  justify-content: center;
+  background-color: aqua;
+  margin-top: 50px;
+  width: 100vw;
+  height: 400px;
+}
+
+.btn_card{
+  width: 100%;
+}
+
+.form_registro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 80vh;  
+  font-family: $primary-font;
+  font-size: larger;
+  font-weight: bolder;
+  color: $secondary-color;
+  margin: 20px;
+}

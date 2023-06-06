@@ -1,0 +1,30 @@
+@use 'miestilos.scss' ;
+
+/*
+.page {
+  background-image: url(../src/assets/img/hero_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+*/
+.notfound{
+    background-image: url(../src/assets/img/notfound.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: max-content;
+  
+}
+/*
+html{
+  height: 100%;
+  background-color: $primary-color;
+}
+*/
+
+h1 {
+  font-family: miestilos.$primary-font;
+  font-weight: 700;
+  font-size: medium;
+}

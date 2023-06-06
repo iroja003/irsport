@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Fútbol",
+	"description": "Donde los sueños se convierten en victorias",
+    "img": "/futbol1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Tenis",
+	"description": "El arte de la raqueta, la grandeza del tenis",
+    "img": "/tennis1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Atletismo",
+	"description": "Supera tus límites, corre hacia la grandeza",
+    "img": "/atletismo1.jpg"
+  }
+  ,
+  {
+    "id": 4,
+    "title": "Basquetbol",
+	"description": "El Basquetbol no es solo deporte, es un estilo de vida",
+    "img": "/basket1.jpg"
+  }
+]

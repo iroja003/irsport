@@ -1,0 +1,18 @@
+[
+  {
+    "id" :1,
+    "name":"user Test",
+    "email": "test@test.com",
+    "password": "1234123",
+    "avatarSRC": "https://www.rockandpop.cl/wp-content/uploads/2022/06/Noticias-60-1-768x432.jpg",
+    "phone":"+56999999999"
+  },
+  {
+    "id" :2,
+    "name":"user admin",
+    "email": "admin@admin.com",
+    "password": "4321",
+    "avatarSRC": "https://i.pinimg.com/originals/c0/76/bf/c076bf4d471586359245e2970ec53776.jpg",
+    "phone":"+56999999999"
+  }
+]

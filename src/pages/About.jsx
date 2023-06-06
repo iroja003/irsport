@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Logo from '../assets/img/Logo1.png';
-/*
-Distribuidor oficial de las mejores marcas deportivas en ropa técnica, balones y guantes de fútbol, equipos y pelotas de básquetbol, vóleibol y handball. Pelotas de tenis, fútbol y rugby. Accesorios deportivos, ropa y todo equipamiento para deportes.  Despachamos a todo Chile. Hasta 6 cuotas precio sin interés (MercadoPago).
-*/
+
+//
 const About = () => {
   return (
     <>

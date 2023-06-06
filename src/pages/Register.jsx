@@ -18,7 +18,7 @@ const Register = () => {
 
    //	const navigate = useNavigate();
 
-   const [name      , setName      ] = useState("");
+    const [name      , setName      ] = useState("");
 	const [email     , setEmail     ] = useState("");
 	const [phone     , setPhone     ] = useState("");
 	const [password  , setPassword  ] = useState("");

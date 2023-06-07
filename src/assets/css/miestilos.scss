@@ -164,6 +164,7 @@ margin: 10px;
   transform: rotate( -45deg) translate(-5px, 1px);
  }
 }
+
 .s_footer {
   font-family: $primary-font;
   font-weight: bold;
@@ -238,7 +239,7 @@ input[type="password"] {
   margin: 20px;
 }
 
-
+/*
 .container_categ{
   display:flex;
   justify-content: center;
@@ -247,6 +248,7 @@ input[type="password"] {
   width: 100vw;
   height: 400px;
 }
+*/
 
 .btn_card{
   width: 100%;
@@ -258,10 +260,38 @@ input[type="password"] {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
-  height: 80vh;  
+  height: 90vh;  
   font-family: $primary-font;
   font-size: larger;
   font-weight: bolder;
   color: $secondary-color;
   margin: 20px;
+  padding-top: 35px;
 }
+
+.input_boton {
+  margin-bottom: 80px;
+}
+
+.icon-container {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 5px;
+}
+
+.icon_favorito{
+  color: red;
+  font-size: 24px;
+}
+
+.box_img{
+	width:60px;
+	height:60px;
+	background-image :url('https://i.pinimg.com/originals/c0/76/bf/c076bf4d471586359245e2970ec53776.jpg');
+	background-size:cover;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+

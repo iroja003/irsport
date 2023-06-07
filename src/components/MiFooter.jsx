@@ -16,7 +16,7 @@ import {FaCcVisa, FaCcMastercard, FaPaypal} from 'react-icons/fa';
 const MiFooter = () => {
   return (
       <>
-      <div className="container-fluid">
+      <div className="container-fluid box_footer">
         <div className="row p-3 pb-2 bg-primary s_footer">
         <div className="col-xs-12 col-md-6 col-lg-3">
             <div className='logo_footer'>

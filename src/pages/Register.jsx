@@ -34,6 +34,7 @@ const Register = () => {
 	<div className="container form form_registro">
 		<form onSubmit={handleSubmit} >
 		<p>Registrar en IR Sports</p>
+		<div className="box_img"></div>
 		<div className="input-container">
 			<label> <RiUserLine /> Nombre y Apellido</label>
 			<input 
@@ -44,7 +45,7 @@ const Register = () => {
 			   />
 		</div>
 		<div className="input-container">
-			<label> <AiOutlinePhone /> Email</label>
+			<label> <AiOutlinePhone />Telefono</label>
 			<input 
 			   type="text" 
 			   placeholder='+99 999999999...' 
@@ -79,7 +80,7 @@ const Register = () => {
 			   onChange ={(e) => setRepassword(e.target.value)} 
 			 />
 		</div>
-		<div className="input-container">
+		<div className="input-container input_boton">
 			<button type='submit' className="btn btn-primary">Registrar</button>
      	</div>
 		</form>

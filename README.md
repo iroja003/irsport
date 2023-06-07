@@ -1,6 +1,6 @@
 # irsport
 Proyecto Final G5
-# Deply
+# Deploy
 
 https://irsport.vercel.app/
 

@@ -225,31 +225,6 @@ input[type="password"] {
 }
 
 
-.container_card {
-  display: flex;
-//  flex-direction: column;
-  justify-content: center;
-//  flex: 0 1 calc(50% - 1em);
-}
-
-.card_i {
-  background: $primary-color;
-  width: 270px;
-  height: 348px;
-  margin: 20px;
-}
-
-/*
-.container_categ{
-  display:flex;
-  justify-content: center;
-  background-color: aqua;
-  margin-top: 50px;
-  width: 100vw;
-  height: 400px;
-}
-*/
-
 .btn_card{
   width: 100%;
 }

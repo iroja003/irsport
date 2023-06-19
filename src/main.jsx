@@ -5,16 +5,18 @@ import '../src/assets/css/index.scss' ;
 import { BrowserRouter} from 'react-router-dom';
 import UserProvider from "./context/UserContext.jsx";
 import ProductProvider from './context/ProductContext.jsx';
-
+import FavoriteProvider from  './context/FavoriteContext.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider>
       <ProductProvider>
-        <BrowserRouter>
-              <App />
-        </BrowserRouter>
+        <FavoriteProvider>
+          <BrowserRouter>
+                <App />
+          </BrowserRouter>
+        </FavoriteProvider>
       </ProductProvider>
     </UserProvider>
   </React.StrictMode>

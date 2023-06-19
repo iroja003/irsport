@@ -21,17 +21,25 @@ const IrNavbar = () => {
             <Link to="/"><img src={Logo} width='40px' height='40px' /></Link>
              <h1>IR Sports</h1>    
              <div>
-                  <p>{user ?  user.name : ""} </p>   
+                  <p>{user ? user.name : ""} </p>   
              </div>
           </div>
           <div className={`cabecera_items ${isOpen && "open"}`}>
             <Link to="/"        ><FaHome /> Home</Link>
             <Link to="/category">Category</Link>
             <Link to="/carrito" ><FaShoppingCart /> 0</Link>
-            <Link to="/login"   ><FaUser /> Login   </Link>
-            <Link to="/register"><FaUserPlus /> Register</Link>
             {
-              user ? <button onClick={logout}  className="btn btn-primary"> Logout </button> : ""
+              user ? (
+                <>
+                  <Link to="/dashboard"> Dashboard</Link>
+                  <button onClick={logout}  className="btn btn-primary"> Logout </button>          
+                </>                
+              ) : (
+                <>
+                  <Link to="/login"   ><FaUser /> Login   </Link>
+                  <Link to="/register"><FaUserPlus /> Register</Link>
+                </>
+              )        
             }
           </div>
           <div className={`cabecera_toggle  ${isOpen && "open"}`}  onClick={() => setIsOpen(!isOpen)}>

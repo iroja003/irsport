@@ -18,17 +18,18 @@ const Category = () => {
       getCategorias();  
   },[]);
 
- 
-  return (
+   return (
    <>
-    <section className="container_card">
+    <section className="container p-4">
+      <div className="row">
       {
             categoria.map((c) =>  (      
-             <div className="card_i" key={c.id}>
+             <div className="col-lg-3 col-md-6 col-sm-12" key={c.id}>
                 <CardCateg  categorias={c} />
               </div> 
                     ))
       }
+      </div>
     </section>
    </>
   )

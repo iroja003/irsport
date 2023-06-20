@@ -8,10 +8,11 @@ import Home  from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import NotFound from './pages/NotFound';
-import Category from './pages/Category';
-import Carrito from './pages/Carrito';
+import NotFound  from './pages/NotFound';
+import Category  from './pages/Category';
+import Carrito   from './pages/Carrito';
 import Productos from './pages/Productos';
+import Producto  from './pages/Producto';
 //
 import IrNavbar from './components/IrNavbar';
 import MiFooter from './components/MiFooter';
@@ -31,7 +32,8 @@ const App = () => {
         <Route path='/login'        element={ <Login />} />
         <Route path='/register'     element={<Register />} />
         <Route path='/dashboard'    element={ user ? <Dashboard />: <Navigate to="/login" />  } />
-        <Route path='/productos'     element={<Productos />} />
+        <Route path='/producto/:itemId' element={<Producto />} />
+        <Route path='/productos'    element={<Productos />} />
         <Route path='/*'            element={<NotFound />}  />
       </Routes>
       <MiFooter />

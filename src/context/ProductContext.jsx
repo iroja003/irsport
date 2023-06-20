@@ -22,7 +22,7 @@ const ProductProvider = ({children}) => {
     
     // Funcionalidad Carro de Compra
     // 1. Agregar al Carro
-    const addTocart = ({id, precio, nombre, img}) => { 
+    const addToCart = ({id, precio, nombre, img}) => { 
           const itemFoundIndex = carrito.findIndex((p) => p.id === id );
           const prodCarro = {id, precio, nombre, img, count:1} ;
 
@@ -52,7 +52,7 @@ const ProductProvider = ({children}) => {
     }
 
     return(
-           <ProductContext.Provider value ={{ products,carrito, setCarrito, addTocart, incrementItem, decrementItem }}>
+           <ProductContext.Provider value ={{ products,carrito, setCarrito, addToCart, incrementItem, decrementItem }}>
              {children}
            </ProductContext.Provider> 
     );

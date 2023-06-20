@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
 //
+import { useNavigate } from 'react-router-dom'; 
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { FavoriteContext } from '../context/FavoriteContext';
+import { ProductContext } from '../context/ProductContext';
 
 
 const CardProducts = ({productos, favorite}) => {
-    
+  
+  const {addToCart} = useContext(ProductContext);
   const {addFavorite} = useContext(FavoriteContext) ;      
-
+  const navigate = useNavigate();
+  
   return (
     <>
     <div className="card text-center">
@@ -24,12 +28,21 @@ const CardProducts = ({productos, favorite}) => {
               <p className="card-text">{productos.description}</p>
               <hr></hr>
               <h6 className="card-title"> Precio : {productos.price}</h6>
-              <button 
-                className="btn btn-primary btn_card"
-                onClick={ ()=> addToCart()  }
-                >
-                  Add Carro
-              </button>
+              <div className="d-flex justify-content-between gap-4">
+                  <button 
+                    to={`/producto/${productos.id}`}
+                    className="btn btn-primary btn_card"
+                    onClick={()=> navigate(`/producto/${productos.id}`)}
+                    >
+                      Ver Detalle
+                  </button>
+                  <button 
+                    className="btn btn-primary btn_card"
+                    onClick={ ()=> addToCart()  }
+                    >
+                      Add Carro
+                  </button>
+              </div>
           </div>
     </div>
    </>

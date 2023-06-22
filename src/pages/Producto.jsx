@@ -6,23 +6,24 @@ import { ProductContext } from '../context/ProductContext';
 //
 const Producto = () => {
   
-  //const [prodDetail, setProdDetail] = useState([]);
   const {itemId} = useParams();
+  const {products, addToCart } = useContext(ProductContext);
+
+  const [prodDetail, setProdDetail] = useState([]);
   console.log(itemId);
   //
-  const {products, addToCart } = useContext(ProductContext);
   //console.log(products);
   //
-//  const getElemento = () => {
+    const getElemento = () => {
     const elemento= products.filter((p) => p.id === itemId);
- //     setProdDetail(elemento);  
- // };
+      setProdDetail(elemento);  
+  };
  
- /*
+ 
   useEffect ( () => {
     getElemento(); 
   },[products])
-  */
+ 
   //
 /*
       <div className="container" key={prodDetail.id}>
@@ -55,9 +56,9 @@ const Producto = () => {
 */
   return (
     <>
-      <div className="container" key={elemento[0].id}>
-          <h1>Detalle {elemento[0].title}</h1>
-          <p>{elemento[0].description}</p>
+      <div className="container" key={prodDetail.id}>
+          <h1>Detalle {prodDetail.title}</h1>
+          <p>{prodDetail.description}</p>
       </div>
     </>
   );

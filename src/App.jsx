@@ -26,15 +26,15 @@ const App = () => {
     <div className='container-fluid' >
       <IrNavbar /> 
       <Routes>
-        <Route path='/'             element={<Home />}  />
-        <Route path='/category'     element={<Category />} />
-        <Route path='/carrito'      element={<Carrito />} />
-        <Route path='/login'        element={ <Login />} />
-        <Route path='/register'     element={<Register />} />
-        <Route path='/dashboard'    element={ user ? <Dashboard />: <Navigate to="/login" />  } />
+        <Route path='/'                 element={<Home />}  />
+        <Route path='/category'         element={<Category />} />
+        <Route path='/carrito'          element={<Carrito />} />
+        <Route path='/login'            element={ <Login />} />
+        <Route path='/register'         element={<Register />} />
+        <Route path='/dashboard'        element={ user ? <Dashboard />: <Navigate to="/login" />  } />
         <Route path='/producto/:itemId' element={<Producto/>} />
-        <Route path='/productos'    element={<Productos />} />
-        <Route path='/*'            element={<NotFound />}  />
+        <Route path='/productos'        element={<Productos />} />
+        <Route path='/*'                element={<NotFound />}  />
       </Routes>
       <MiFooter />
     </div>

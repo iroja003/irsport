@@ -7,7 +7,8 @@ export const ProductContext = createContext();
 const ProductProvider = ({children}) => {
 
     const [products, setProducts] = useState([]);
-    const [carrito, setCarrito  ] = useState([])
+    const [carrito , setCarrito ] = useState([]);
+    const [categ   , setCateg   ] = useState("");
 // getProducts
     const getProducts = async () => { 
         const res    = await fetch("/products.json")  ;
@@ -52,7 +53,7 @@ const ProductProvider = ({children}) => {
     }
 
     return(
-           <ProductContext.Provider value ={{ products,carrito, setCarrito, addToCart, incrementItem, decrementItem }}>
+           <ProductContext.Provider value ={{ products, categ, setCateg, carrito, setCarrito, addToCart, incrementItem, decrementItem }}>
              {children}
            </ProductContext.Provider> 
     );

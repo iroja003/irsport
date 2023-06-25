@@ -31,12 +31,14 @@ const CardProducts = ({productos, favorite}) => {
               <div className="d-flex justify-content-between gap-4">
                   <button
                     className="btn btn-primary btn_card"
+                    type="button"
                     onClick={() =>  navigate(`/producto/${productos.id}`) }
                     >
                     Ver Más
                   </button>
                   <button 
                     className="btn btn-primary btn_card"
+                    type="button"
                     onClick={ () => addToCart(productos.id, productos.price, productos.title, productos.img)  }
                     >
                       Add Carro

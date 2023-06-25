@@ -53,7 +53,7 @@ const ProductProvider = ({children}) => {
     }
 
     return(
-           <ProductContext.Provider value ={{ products, categ, setCateg, carrito, setCarrito, addToCart, incrementItem, decrementItem }}>
+           <ProductContext.Provider value ={{ products, setProducts, categ, setCateg, carrito, setCarrito, addToCart, incrementItem, decrementItem }}>
              {children}
            </ProductContext.Provider> 
     );

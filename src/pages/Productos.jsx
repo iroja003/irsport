@@ -14,12 +14,12 @@ const Productos = () => {
   return (
     <>   
     <section className="container p-4">
-      <div className="row">
+      <div className="row" >
       {
         products.filter((p) => p.categoria === categ )
         .map((p) =>  (      
-             <div className="col-lg-4 col-md-6 col-sm-12 p-1">
-                <CardProducts  productos={p} key={p.id} favorite={favorites.some(itemFav => itemFav == p.id )} />
+             <div className="col-lg-4 col-md-6 col-sm-12 p-1" key={p.id}>
+                <CardProducts  productos={p}  favorite={favorites.some(itemFav => itemFav == p.id )} />
               </div> 
             ))
       }

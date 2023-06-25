@@ -12,7 +12,7 @@ import NotFound  from './pages/NotFound';
 import Category  from './pages/Category';
 import Carrito   from './pages/Carrito';
 import Productos from './pages/Productos';
-import Producto  from './pages/Producto';
+import Detalle   from './pages/Detalle';
 //
 import IrNavbar from './components/IrNavbar';
 import MiFooter from './components/MiFooter';
@@ -32,7 +32,7 @@ const App = () => {
         <Route path='/login'            element={ <Login />} />
         <Route path='/register'         element={<Register />} />
         <Route path='/dashboard'        element={ user ? <Dashboard />: <Navigate to="/login" />  } />
-        <Route path='/producto/:itemId' element={<Producto/>} />
+        <Route path='/producto/:itemId' element={<Detalle/>} />
         <Route path='/productos'        element={<Productos />} />
         <Route path='/*'                element={<NotFound />}  />
       </Routes>

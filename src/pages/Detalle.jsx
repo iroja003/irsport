@@ -4,8 +4,11 @@ import { useParams } from 'react-router-dom';
 //
 import { ProductContext } from '../context/ProductContext';
 //
+import { FormatPrice } from '../Utilitarios/Utilitario';
+//
 import {   FaShoppingCart } from 'react-icons/fa';
 //
+
 const Detalle = () => {
   const {products, addToCart } = useContext(ProductContext);
   const [prodDetail, setProdDetail] = useState({});
@@ -44,7 +47,7 @@ const Detalle = () => {
                 <div className="card-body">
                   <h5 className="card-title">{prodDetail.title}</h5>
                   <p className="card-text">{itemId}-{prodDetail.description}</p>
-                  <p className="card-text"><small className="text-muted">$ 75.000 : {prodDetail.price} </small></p>
+                  <p className="card-text"><small className="text-muted">$ {FormatPrice(prodDetail.price)} </small></p>
                   <button 
                       className="btn btn-primary btn_card"
                       type = "button"

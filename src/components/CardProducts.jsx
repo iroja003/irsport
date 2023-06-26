@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 //
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate   } from 'react-router-dom'; 
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
-import { FavoriteContext } from '../context/FavoriteContext';
+//
+import { FavoriteContext} from '../context/FavoriteContext';
 import { ProductContext } from '../context/ProductContext';
-
+//
+import { FormatPrice    } from '../Utilitarios/Utilitario';
 
 const CardProducts = ({productos, favorite}) => {
   
@@ -27,7 +29,7 @@ const CardProducts = ({productos, favorite}) => {
               <h5 className="card-title">{productos.title}</h5>
               <p className="card-text">{productos.description}</p>
               <hr></hr>
-              <h6 className="card-title"> Precio : {productos.price}</h6>
+              <h6 className="card-title"> $ {FormatPrice(productos.price)}</h6>
               <div className="d-flex justify-content-between gap-4">
                   <button
                     className="btn btn-primary btn_card"

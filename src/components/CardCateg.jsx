@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 //
 import {useNavigate } from 'react-router-dom';
+//
 import { ProductContext } from '../context/ProductContext';
-
+//
 const CardCateg = ({categorias}) => {
 // <Link to={"/productos"} onClick= {handleClick()} className="btn btn-primary btn_card">Detalle </Link>
 //

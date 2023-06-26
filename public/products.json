@@ -5,7 +5,7 @@
     "title": "Camisetas 1",
     "user": "test@test.com",
     "description": "La mejor camiseta del mundo",
-    "price": "30999",
+    "price": 30999
     "img": "https://alanguloo.cl/wp-content/uploads/2022/07/PSG-L.png"
   },
   {
@@ -14,7 +14,7 @@
     "title": "Camisetas 2",
     "user": "test@test.com",
     "description": "La mejor camiseta del mundo",
-    "price": "22999",
+    "price": 22999,
     "img": "https://alanguloo.cl/wp-content/uploads/2022/07/PSG-L.png"
   },
   {
@@ -23,7 +23,7 @@
     "title": "Camisetas 3",
     "user": "test@test.com",
     "description": "La mejor camiseta del mundo",
-    "price": "31999",
+    "price": 31999,
     "img": "https://alanguloo.cl/wp-content/uploads/2022/07/PSG-L.png"
   },
   {
@@ -32,7 +32,7 @@
     "title": "Camisetas 4",
     "user": "test@test.com",
     "description": "La mejor camiseta del mundo",
-    "price": "20999",
+    "price": 20999,
     "img": "https://alanguloo.cl/wp-content/uploads/2022/07/PSG-L.png"
   },
   {
@@ -41,7 +41,7 @@
     "title": "Camisetas 5",
     "user": "test@test.com",
     "description": "La mejor camiseta del mundo",
-    "price": "18999",
+    "price": 18999,
     "img": "https://alanguloo.cl/wp-content/uploads/2022/07/PSG-L.png"
   },
   {
@@ -50,7 +50,7 @@
     "title": "Camisetas 6",
     "user": "test@test.com",
     "description": "La mejor camiseta del mundo",
-    "price": "35999",
+    "price": 35999,
     "img": "https://alanguloo.cl/wp-content/uploads/2022/07/PSG-L.png"
   },
   {
@@ -59,7 +59,7 @@
     "title": "Raquetas 1",
     "user": "test@test.com",
 	  "description": "El arte de la raqueta, la grandeza del tenis",
-    "price": "26999",
+    "price": 26999,
     "img": "/tennis1.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "title": "Raquetas 2",
     "user": "test@test.com",
 	  "description": "El arte de la raqueta, la grandeza del tenis",
-    "price": "17999",
+    "price": 17999,
     "img": "/tennis1.jpg"
   },
   {
@@ -77,7 +77,7 @@
     "title": "Raquetas 3",
     "user": "test@test.com",
 	  "description": "El arte de la raqueta, la grandeza del tenis",
-    "price": "24999",
+    "price": 24999,
     "img": "/tennis1.jpg"
   },
   {
@@ -86,7 +86,7 @@
     "title": "Zapatillas 1",
     "user": "test@test.com",
 	  "description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "25999",
+    "price": 25999,
     "img": "/basket1.jpg"
   },
   {
@@ -95,7 +95,7 @@
     "title": "Zapatillas 2",
     "user": "test@test.com",
 	  "description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "36999",
+    "price": 36999,
     "img": "/basket1.jpg"
   },
   {
@@ -104,7 +104,7 @@
     "title": "Zapatillas 3",
     "user": "test@test.com",
 	  "description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "40999",
+    "price": 40999,
     "img": "/basket1.jpg"
   },
   {
@@ -113,7 +113,7 @@
     "title": "Zapatillas 4",
     "user": "test@test.com",
 	  "description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "38999",
+    "price": 38999,
     "img": "/basket1.jpg"
   },
   {
@@ -122,7 +122,7 @@
     "title": "Zapatillas 1",
     "user": "test@test.com",
 	  "description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "39999",
+    "price": 39999,
     "img": "/basket1.jpg"
   },
   {
@@ -131,7 +131,7 @@
     "title": "Zapatillas 2",
     "user": "test@test.com",
 	  "description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "42999",
+    "price": 42999,
     "img": "/atletismo1.jpg"
   },
   {
@@ -140,7 +140,7 @@
     "title": "Zapatillas 3",
     "user": "test@test.com",
 	"description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "10999",
+    "price": 10999,
     "img": "/atletismo1.jpg"
   },
   {
@@ -149,7 +149,7 @@
     "title": "Zapatillas 4",
     "user": "test@test.com",
 	"description": "El Basquetbol no es solo deporte, es un estilo de vida",
-    "price": "12999",
+    "price": 12999,
     "img": "/atletismo1.jpg"
   }
 ]

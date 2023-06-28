@@ -34,8 +34,7 @@ const Detalle = () => {
 
    return (
     <>
-      <div className="container">
-        <div className="card mb-3 prod-det" key={prodDetail.id}>
+        <div className="card mb-3 mt-5 btn_card" key={prodDetail.id}>
             <div className="row g-0" >
               <div className="col-md-4">
                 <img src={prodDetail.img}
@@ -46,10 +45,10 @@ const Detalle = () => {
               <div className="col-md-8">
                 <div className="card-body">
                   <h5 className="card-title">{prodDetail.title}</h5>
-                  <p className="card-text">{itemId}-{prodDetail.description}</p>
+                  <p className="card-text">{prodDetail.description}</p>
                   <p className="card-text"><small className="text-muted">$ {FormatPrice(prodDetail.price)} </small></p>
                   <button 
-                      className="btn btn-primary btn_card"
+                      className="btn btn-primary"
                       type = "button"
                       >
                         Add <FaShoppingCart />
@@ -58,7 +57,6 @@ const Detalle = () => {
               </div>
             </div>
         </div>
-      </div> 
     </>
   );
 };

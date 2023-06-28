@@ -23,9 +23,9 @@ const ProductProvider = ({children}) => {
     
     // Funcionalidad Carro de Compra
     // 1. Agregar al Carro
-    const addToCart = ({id, precio, nombre, img}) => { 
+    const addToCart = ({id, price, name, img}) => { 
           const itemFoundIndex = carrito.findIndex((p) => p.id === id );
-          const prodCarro = {id, precio, nombre, img, count:1} ;
+          const prodCarro = {id, price, name, img, count:1} ;
 
           if (itemFoundIndex >= 0) {
             carrito[itemFoundIndex].count++;

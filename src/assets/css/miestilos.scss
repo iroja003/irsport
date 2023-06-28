@@ -11,6 +11,10 @@ $primary-color: #EEEEEE;
 $secondary-color: #180795;
 $color-items-menu:#EEEEEE;
 $fondo-menu: #222d8d;
+$color-title-card: #000000;
+$color-text-card: #0d3b73;
+
+
 
 *{
   box-sizing: border-box;
@@ -224,11 +228,10 @@ input[type="password"] {
   color: $secondary-color;
 }
 
-/*
 .btn_card{
   width: 100%;
 }
-*/
+
 .form_registro{
   display: flex;
   align-items: center;
@@ -269,7 +272,17 @@ input[type="password"] {
 	margin: 0 auto;
 }
 
-.prod-det {
-  max-width: 540px;
+.card-title {
+  font-family: $secondary-font;
+  font-weight: bold;
+  font-size: 30px;  
+  color : $color-title-card;
 }
 
+.card-text, .text-muted {
+  font-family: $secondary-font;
+  font-weight: bold;
+  font-size: 15px;  
+  color : $color-text-card;
+
+}  

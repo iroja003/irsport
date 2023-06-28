@@ -5,6 +5,7 @@ import Logo from '../assets/img/Logo1.png';
 import { FaHome,  FaShoppingCart, FaUser, FaUserPlus } from 'react-icons/fa';
 import { UserContext } from '../context/UserContext';
 import { Button } from 'bootstrap';
+import { ProductContext } from '../context/ProductContext';
 /*
 FaSistrix, FaFileContract
 FaInfoCircle,
@@ -14,6 +15,10 @@ FaInfoCircle,
 const IrNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const {user,logout } = useContext(UserContext);
+  const {carrito}      = useContext(ProductContext);
+  console.log(carrito);
+  const totalCarro     = carrito.reduce((valorAntes, {count, price}) => (valorAntes + price)*count,0 );
+
   return (
     <>
         <header className='cabecera navbar-inverse bg-primary'>
@@ -27,7 +32,9 @@ const IrNavbar = () => {
           <div className={`cabecera_items ${isOpen && "open"}`}>
             <Link to="/"        ><FaHome /> Home</Link>
             <Link to="/category">Category</Link>
-            <Link to="/carrito" ><FaShoppingCart /> 0</Link>
+            <div>
+              <Link to="/carrito"><FaShoppingCart /> Total: $ 0 </Link>
+            </div>
             {
               user ? (
                 <>

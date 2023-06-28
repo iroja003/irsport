@@ -7,13 +7,17 @@ import { FavoriteContext} from '../context/FavoriteContext';
 import { ProductContext } from '../context/ProductContext';
 //
 import { FormatPrice    } from '../Utilitarios/Utilitario';
+//
+import {FaShoppingCart} from 'react-icons/fa';
 
 const CardProducts = ({productos, favorite}) => {
   
   const {addToCart} = useContext(ProductContext);
   const {addFavorite} = useContext(FavoriteContext) ;      
   const navigate = useNavigate();
-  
+
+  /**                   onClick={ () => addToCart(productos.id, productos.price, productos.title, productos.img)  } */
+
   return (
     <>
     <div className="card text-center" key={productos.id}>
@@ -43,7 +47,7 @@ const CardProducts = ({productos, favorite}) => {
                     type="button"
                     onClick={ () => addToCart(productos.id, productos.price, productos.title, productos.img)  }
                     >
-                      Add Carro
+                      Add <FaShoppingCart />
                   </button>
               </div>
           </div>

@@ -53,8 +53,8 @@ const Register = () => {
   return (
     <>
 	<div className="container form form_registro">
-		<form onSubmit={handleSubmit()} >
-		<p>Registrar en IR Sports</p>
+		<form onSubmit={handleSubmit} >
+		<h5>Registrar en IR Sports</h5>
 		<div className="box_img"></div>
 		<div className="input-container">
 			<label> <RiUserLine /> Nombre y Apellido</label>

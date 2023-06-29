@@ -1,5 +1,6 @@
 import React,{ useContext } from 'react';
-import {UserContext } from '../context/UserContext';
+import { UserContext } from '../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 // iconos
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { RiUserLine } from 'react-icons/ri';
@@ -10,6 +11,8 @@ const Dashboard = () => {
 
   const {user,logout} = useContext(UserContext);
   console.log(user);
+  const navigate = useNavigate();
+
   //
   return (
     <>
@@ -29,6 +32,7 @@ const Dashboard = () => {
                       <button
                         className="btn btn-primary btn_card"
                         type="button"
+                        onClick={() =>  navigate("/profile")}
                         >
                         Editar
                       </button>

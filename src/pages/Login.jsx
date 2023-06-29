@@ -4,6 +4,7 @@ import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 
 import {  AiOutlineMail, AiTwotoneLock  } from 'react-icons/ai';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -14,24 +15,35 @@ const Login = () => {
 	const [password, setPassword] = useState("");
 	const [error   , setError]= useState(false);
     
-	const handleSubmit = async(e) => { 
+	const handleSubmit = (e) => { 
+		
 		e.preventDefault();
+		
 		setError(false);
+
 		if ( !email.trim() ) {
 			setError(true);
-			return
-		}
+			return Swal.fire({
+				icon:"error",
+				title:"Error-01: Rellenar Campos",
+				text:"Falta completar email"
+			});
+		};
 
-		 const user = await login(email, password);
-    console.log(user);
-	if (user) {
-			setEmail("");
-			setPassword("");
-			return navigate("/dashboard");
-	} else {
-           alert("Correo y/o contraseña incorrecta");      			
-	}
-};
+		const user = login(email, password);
+		console.log(user);
+		if (user) {
+				setEmail("");
+				setPassword("");
+				return navigate("/dashboard");
+		}
+		Swal.fire({
+			icon:"error",
+			title:"Error-02: Datos Incorrectos",
+			text:"Usuario no Existe, Favor Registrarse"
+		});
+		return navigate("/register");
+  };
 
   return (
     <>

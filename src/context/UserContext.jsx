@@ -1,14 +1,20 @@
 import { useEffect } from "react";
 import { createContext, useState } from "react";
 
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css'; // for React
+
 export const UserContext = createContext();
 
 //
 const initialStateUser  = localStorage.getItem("user" ) ? JSON.parse(localStorage.getItem("user")) : null; 
 //
-const initialStateUsers = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : null; 
+const initialStateUsers = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : []; 
 
 const UserProvider = ({children}) => { 
+  //
+  // Create an instance of Notyf
+  const notyf = new Notyf();
   //
   const [user, setUser  ] = useState(initialStateUser);
   const [users, setUsers] = useState(initialStateUsers);
@@ -26,7 +32,7 @@ const UserProvider = ({children}) => {
  
   // 
     useEffect (() => {
-    if (users.length === 0) {
+    if ( users.length === 0  ) {
       getUsers();
     }
    },[]);
@@ -37,8 +43,7 @@ const UserProvider = ({children}) => {
     }
  },[user]);
 
-  const login = async (email, password) => {
-      const users = await getUsers();
+  const login = (email, password) => {
       const userData = users.find((ele) => ele.email.toLowerCase() === email.toLowerCase() && ele.password === password);
       console.log(userData);
     
@@ -69,6 +74,7 @@ const UserProvider = ({children}) => {
     setUser(user);
     const usersUpd = users.map((u) => u.id === parseInt(user.id) ? user : u );
     setUsers(usersUpd);
+    notyf.success("Usuario [ "+user.name+" ] , Actualizado");
    };
 
    return (

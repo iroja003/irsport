@@ -50,6 +50,7 @@ const Detalle = () => {
                   <button 
                       className="btn btn-primary"
                       type = "button"
+                      onClick={ () => addToCart(prodDetail)  }
                       >
                         Add <FaShoppingCart />
                     </button>

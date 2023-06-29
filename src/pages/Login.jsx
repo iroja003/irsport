@@ -10,12 +10,19 @@ const Login = () => {
     const {login} = useContext(UserContext);
 	const navigate = useNavigate();
 
-	const [email, setEmail] = useState();
-	const [password, setPassword] = useState();
+	const [email   , setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [error   , setError]= useState(false);
     
 	const handleSubmit = async(e) => { 
-		 e.preventDefault();
-	const user = await login(email, password);
+		e.preventDefault();
+		setError(false);
+		if ( !email.trim() ) {
+			setError(true);
+			return
+		}
+
+		 const user = await login(email, password);
     console.log(user);
 	if (user) {
 			setEmail("");

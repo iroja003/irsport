@@ -12,7 +12,7 @@ import {FaShoppingCart} from 'react-icons/fa';
 
 const CardProducts = ({productos, favorite}) => {
   
-  const {addToCart} = useContext(ProductContext);
+  const {addToCart  } = useContext(ProductContext);
   const {addFavorite} = useContext(FavoriteContext) ;      
   const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ const CardProducts = ({productos, favorite}) => {
                   <button 
                     className="btn btn-primary btn_card"
                     type="button"
-                    onClick={ () => addToCart(productos.id, productos.price, productos.title, productos.img)  }
+                    onClick={ () => addToCart(productos)  }
                     >
                       Add <FaShoppingCart />
                   </button>

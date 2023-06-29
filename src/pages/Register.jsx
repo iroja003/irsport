@@ -5,18 +5,16 @@ import { useContext } from 'react';
 // iconos
 import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
 import { RiLockPasswordLine, RiUserLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { UserContext } from '../context/UserContext';
 
-const handleSubmit = async(e) => { 
-   e.preventDefault();
-   console.log(e);
-};
 
 const Register = () => {
 
-   const {register} = useContext(UserContext);
+	const navigate   = useNavigate();
+	const {register} = useContext(UserContext);
 
-   //	const navigate = useNavigate();
 
     const [name      , setName      ] = useState("");
 	const [email     , setEmail     ] = useState("");
@@ -24,15 +22,38 @@ const Register = () => {
 	const [password  , setPassword  ] = useState("");
 	const [repassword, setRepassword] = useState("");
 
-   const handleSubmit = (e) => {
+	const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(e);  
-    };
+      if (password !== repassword ) {
+		 return Swal.fire ({
+			icon:"error", 
+			title:"Error 001 : password",
+			text: "password y repassword no coinciden",
+		 });
+	  };
+
+	  const user = register({
+			name,
+			email,
+			phone,
+			password,
+			id: Date.now(),
+	  });
+
+	  if (user) {
+		return Swal.fire ({
+			icon:"error", 
+			title:"Error 002 : email",
+			text: "Email existe",
+		 });
+	  }
+	   navigate.push("/dashboard");
+  };
   
   return (
     <>
 	<div className="container form form_registro">
-		<form onSubmit={handleSubmit} >
+		<form onSubmit={handleSubmit()} >
 		<p>Registrar en IR Sports</p>
 		<div className="box_img"></div>
 		<div className="input-container">
@@ -80,7 +101,7 @@ const Register = () => {
 			   onChange ={(e) => setRepassword(e.target.value)} 
 			 />
 		</div>
-		<div className="input-container input_boton">
+		<div className="input-container">
 			<button type='submit' className="btn btn-primary">Registrar</button>
      	</div>
 		</form>

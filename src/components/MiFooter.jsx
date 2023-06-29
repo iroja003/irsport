@@ -4,14 +4,9 @@ import { Link } from 'react-router-dom';
 //
 import Logo from '../assets/img/Logo1.png';
 
-import {FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaCopyright } from 'react-icons/fa';
+import {FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaCopyright, FaUserPlus } from 'react-icons/fa';
+
 import {FaCcVisa, FaCcMastercard, FaPaypal} from 'react-icons/fa';
-/*
-             <a href='https://es-la.facebook.com/'><FaFacebookF /></a> 
-             <a href='https://twitter.com/'><FaTwitter /></a>
-             <a href='https://www.instagram.com/'><FaInstagram /></a>
-             <a href='https://www.youtube.com/'><FaYoutube /></a>
-*/
 
 const MiFooter = () => {
   return (
@@ -44,7 +39,7 @@ const MiFooter = () => {
           <div className="col-xs-12 col-md-6 col-lg-3">
             <p className='h5'>IR Sports CL</p>
             <div className="text-white text-decoration-none mb-2 link_footer">
-                <Link to='/register'>Registrate</Link>
+                <Link to='/register'><FaUserPlus />Registrate</Link>
             </div>
             <div className="text-white text-decoration-none mb-2 link_footer">
                 <a href="#" className="text-white text-decoration-none">Cómo Comprar</a>

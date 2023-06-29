@@ -13,6 +13,7 @@ import Category  from './pages/Category';
 import Carrito   from './pages/Carrito';
 import Productos from './pages/Productos';
 import Detalle   from './pages/Detalle';
+import Profile   from './pages/Profile';
 //
 import IrNavbar from './components/IrNavbar';
 import MiFooter from './components/MiFooter';
@@ -34,6 +35,7 @@ const App = () => {
         <Route path='/dashboard'        element={ user ? <Dashboard />: <Navigate to="/login" />  } />
         <Route path='/producto/:itemId' element={<Detalle/>} />
         <Route path='/productos'        element={<Productos />} />
+        <Route path='/profile'          element={<Profile />} />
         <Route path='/*'                element={<NotFound />}  />
       </Routes>
       <MiFooter />

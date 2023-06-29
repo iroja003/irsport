@@ -1,9 +1,16 @@
 import { createContext } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-
+//
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css'; // for React
+//
 export const ProductContext = createContext();
 
+// Create an instance of Notyf
+const notyf = new Notyf();
+
+// Provider
 const ProductProvider = ({children}) => {
 
     const [products, setProducts] = useState([]);
@@ -22,10 +29,13 @@ const ProductProvider = ({children}) => {
      },[]);
     
     // Funcionalidad Carro de Compra
+
     // 1. Agregar al Carro
-    const addToCart = ({id, price, name, img}) => { 
-          const itemFoundIndex = carrito.findIndex((p) => p.id === id );
-          const prodCarro = {id, price, name, img, count:1} ;
+
+    const addToCart = ({id, price, title, img}) => { 
+          const itemFoundIndex = carrito.findIndex((p) => p.id === parseInt(id) );
+          console.log(itemFoundIndex);
+          const prodCarro = {id, price, title, img, count:1} ;
 
           if (itemFoundIndex >= 0) {
             carrito[itemFoundIndex].count++;
@@ -33,6 +43,7 @@ const ProductProvider = ({children}) => {
           } else {
             setCarrito([...carrito, prodCarro]);
           }
+          notyf.success("producto Agregado al Carro de Compras");
      } ;
     // 2. Incrementar un Articulo
     const incrementItem = (i) => {
@@ -52,8 +63,11 @@ const ProductProvider = ({children}) => {
         setCarrito([...carrito]);
     }
 
+// 4. Total carrito
+    const totalCarro     = carrito.reduce((valorAntes, {count, price}) => valorAntes + price*count,0 );
+//
     return(
-           <ProductContext.Provider value ={{ products, setProducts, categ, setCateg, carrito, setCarrito, addToCart, incrementItem, decrementItem }}>
+           <ProductContext.Provider value ={{ products, setProducts, categ, setCateg, carrito, setCarrito, addToCart, incrementItem, decrementItem, totalCarro }}>
              {children}
            </ProductContext.Provider> 
     );

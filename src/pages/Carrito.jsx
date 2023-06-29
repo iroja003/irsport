@@ -1,24 +1,26 @@
 //
-import React from 'react';
+import React, { useContext} from 'react';
 import { ProductContext } from '../context/ProductContext';
+import { FormatPrice } from '../Utilitarios/Utilitario';
 //
 
 const Carrito = () => {
-  const {carrito, increment, decrement} = useContext(ProductContext);
-  const totalCarro = carrito.reduce((a, {count, price})=> a + price * count,0) ;
-
+  const {carrito, incrementItem, decrementItem, totalCarro } = useContext(ProductContext);
+  
   return (
     <>
-      <div className="container">
-          <h3>Detalle</h3>
+      <div className="container carrito">
+          { totalCarro !== 0 ? <h3>Detalle</h3> : null}
           {  carrito.map((p,i) => (
           <div key={p.id}>
-              <table className="table text-center">
+              <table className="tabla table table-striped table-hover text-center widt:100%">
                 <thead>
                   <tr>
                     <th scope='col'>Producto</th>
+                    <th scope='col'>Nombre  </th>
+                    <th scope='col'>Precio  </th>
                     <th scope='col'>Cantidad</th>
-                    <th scope='col'>Total</th>
+                    <th scope='col'>Total   </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -28,15 +30,22 @@ const Carrito = () => {
                             <img src={p.img} alt={p.title} width="100" className="m-2" />
                           </div>
                       </th>
-                      <td>
-                          <div className="pt-3">
-                            <button type='button' className="m-2" onClick={() =>increment(i)}>+</button>
-                            <button type='button' className="m-2" onClick={() =>decrement(i)}>-</button>
+                      <td className="m-3 p-3 text-center">
+                          {p.title}
+                      </td>
+                      <td className="m-3 p-3 text-center">
+                         $ {FormatPrice(p.price)}
+                      </td>
+                      <td className="m-3 p-3 text-center">
+                          <div className="p-3">
+                            <button type='button' className="btn btn-primary m-2" onClick={() =>incrementItem(i)}>+</button>
+                            <span>{p.count}</span>
+                            <button type='button' className="btn btn-danger  m-2" onClick={() =>decrementItem(i)}>-</button>
                           </div>
                       </td>
-                      <td>
-                          <div className="pt-4">
-                            Sub-Total$ 99.999
+                      <td className="p-3 m-3 text-center">
+                          <div className="p-4">
+                            <h6><span>$ {FormatPrice(p.price*p.count)}</span> </h6> 
                           </div>
                       </td>
                   </tr>
@@ -44,7 +53,7 @@ const Carrito = () => {
               </table>  
               </div>
               ))}
-              <h4> Total $ <span> {totalCarro} </span></h4>
+              <h5> <span> Total $  { FormatPrice(totalCarro)} </span></h5>
       </div>
     </>
   )

@@ -16,8 +16,7 @@ const CardProducts = ({productos, favorite}) => {
   const {addFavorite} = useContext(FavoriteContext) ;      
   const navigate = useNavigate();
 
-  /**                   onClick={ () => addToCart(productos.id, productos.price, productos.title, productos.img)  } */
-
+  
   return (
     <>
     <div className="card text-center" key={productos.id}>
